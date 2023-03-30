@@ -2,6 +2,7 @@ package net.harry.yu.tutorialmod;
 //matches group
 
 import com.mojang.logging.LogUtils;
+import net.harry.yu.tutorialmod.block.ModBlocks;
 import net.harry.yu.tutorialmod.item.ModItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -24,6 +25,7 @@ import org.slf4j.Logger;
 //import now that 1.19.3 happened...
 import java.awt.*;
 
+import static net.harry.yu.tutorialmod.block.ModBlocks.*;
 import static net.harry.yu.tutorialmod.item.ModItems.*;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -37,6 +39,7 @@ public class TutorialMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         //modEventBus.addListener(this::buildContents);
@@ -73,7 +76,10 @@ public class TutorialMod
                         //add items to tab
                 .displayItems((enabled_flag, populator, has_permissions) -> {
                         populator.accept(GWAGGIUM.get());
-                        populator.accept(GWASHIMOTO.get());})
+                        populator.accept(GWASHIMOTO.get());
+                        populator.accept(GWAGGIUM_BLOCK_ITEM.get());
+                        populator.accept(GWAGGIUM_ORE_ITEM.get());
+                        populator.accept(DEEP_GWAGGIUM_ORE_ITEM.get());})
         );
 
 

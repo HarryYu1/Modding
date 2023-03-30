@@ -1,5 +1,9 @@
 {
   "item.tutorialmod.gwaggium": "Gwaggium",
-  "item.tutorialmod.gwashimoto": "Gwashimoto"
+  "item.tutorialmod.gwashimoto": "Gwashimoto",
+  "block.tutorialmod.gwaggium_block": "Gwaggium Block",
+  "block.tutorialmod.gwaggium_ore": "Gwaggium Ore",
+  "block.tutorialmod.deepslate_gwaggium_ore": "Deepslate Gwaggium Ore",
 
+  "item_group.tutorialmod.example": "My Tab"
 }
