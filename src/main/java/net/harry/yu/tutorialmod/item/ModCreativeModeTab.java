@@ -9,8 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import static net.harry.yu.tutorialmod.TutorialMod.MOD_ID;
 import static net.harry.yu.tutorialmod.block.ModBlocks.*;
-import static net.harry.yu.tutorialmod.item.ModItems.GWAGGIUM;
-import static net.harry.yu.tutorialmod.item.ModItems.GWASHIMOTO;
+import static net.harry.yu.tutorialmod.item.ModItems.*;
 
 public class ModCreativeModeTab{
 
@@ -29,7 +28,8 @@ public class ModCreativeModeTab{
                             populator.accept(GWASHIMOTO.get());
                             populator.accept(GWAGGIUM_BLOCK_ITEM.get());
                             populator.accept(GWAGGIUM_ORE_ITEM.get());
-                            populator.accept(DEEP_GWAGGIUM_ORE_ITEM.get());})
+                            populator.accept(DEEP_GWAGGIUM_ORE_ITEM.get());
+                            populator.accept(EIGHT_BALL.get());})
         );
 
 

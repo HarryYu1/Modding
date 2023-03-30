@@ -1,6 +1,7 @@
 package net.harry.yu.tutorialmod.item;
 
 import net.harry.yu.tutorialmod.TutorialMod;
+import net.harry.yu.tutorialmod.item.custom.EightBallItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,7 +21,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> GWASHIMOTO = ITEM.register("gwashimoto",
             () -> new Item(new Item.Properties().fireResistant()));
-
+    public static final RegistryObject<Item> EIGHT_BALL = ITEM.register("eight_ball",
+            () -> new EightBallItem(new Item.Properties().stacksTo(1)));
     public static void register(IEventBus eventBus) {
         ITEM.register(eventBus);
 
