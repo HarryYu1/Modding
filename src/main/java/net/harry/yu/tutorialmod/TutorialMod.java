@@ -2,6 +2,7 @@ package net.harry.yu.tutorialmod;
 //matches group
 
 import com.mojang.logging.LogUtils;
+import net.harry.yu.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
@@ -16,6 +17,10 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
+//import now that 1.19.3 happened...
+import static net.harry.yu.tutorialmod.item.ModItems.GWAGGIUM;
+import static net.harry.yu.tutorialmod.item.ModItems.GWASHIMOTO;
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(TutorialMod.MOD_ID)
 public class TutorialMod
@@ -26,14 +31,26 @@ public class TutorialMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
 
+        //new way of adding to creative
+        modEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+    }
+
+    private void addCreative(CreativeModeTabEvent.BuildContents event)
+    {
+        if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS)
+            event.accept(GWAGGIUM);
+        if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS)
+            event.accept(GWASHIMOTO);
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
