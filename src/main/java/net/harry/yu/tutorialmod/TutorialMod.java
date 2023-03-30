@@ -3,6 +3,7 @@ package net.harry.yu.tutorialmod;
 
 import com.mojang.logging.LogUtils;
 import net.harry.yu.tutorialmod.block.ModBlocks;
+import net.harry.yu.tutorialmod.item.ModCreativeModeTab;
 import net.harry.yu.tutorialmod.item.ModItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -48,6 +49,7 @@ public class TutorialMod
         MinecraftForge.EVENT_BUS.register(this);
         //needs to be modeventbus for creative tabs
         modEventBus.register(this);
+        modEventBus.register(new ModCreativeModeTab());
 
         //new way of adding to creative
         modEventBus.addListener(this::addCreative);
@@ -65,26 +67,7 @@ public class TutorialMod
             event.accept(GWASHIMOTO);
     }
 
-    @SubscribeEvent
-    public void buildContents(CreativeModeTabEvent.Register event){
-        event.registerCreativeModeTab(new ResourceLocation(MOD_ID, "example"),
-                //name of tab to display
-                builder -> builder.title(Component.translatable("item_group." + MOD_ID + ".example"))
-                //set icon
-                        //.get fetches the item data I assume
-                .icon(()-> new ItemStack(GWAGGIUM.get()))
-                        //add items to tab
-                .displayItems((enabled_flag, populator, has_permissions) -> {
-                        populator.accept(GWAGGIUM.get());
-                        populator.accept(GWASHIMOTO.get());
-                        populator.accept(GWAGGIUM_BLOCK_ITEM.get());
-                        populator.accept(GWAGGIUM_ORE_ITEM.get());
-                        populator.accept(DEEP_GWAGGIUM_ORE_ITEM.get());})
-        );
 
-
-
-    }
 
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

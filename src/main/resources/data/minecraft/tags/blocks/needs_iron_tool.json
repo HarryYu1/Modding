@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "tutorialmod:gwaggium_ore",
+    "tutorialmod:gwaggium_block",
+    "tutorialmod:deepslate_gwaggium_ore"
+  ]
+}

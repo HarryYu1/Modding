@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tutorialmod:gwaggium_block"
+    }
+
+  ],
+  "result": {
+    "item": "tutorialmod:gwaggium",
+    "count": 9
+  }
+
+}

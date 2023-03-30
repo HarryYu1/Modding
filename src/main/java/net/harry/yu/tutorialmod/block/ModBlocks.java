@@ -28,10 +28,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.AMETHYST).friction(0.99f).strength(6f).lightLevel((anystate)->10)));
     public static final RegistryObject<Item> GWAGGIUM_BLOCK_ITEM = registerBlockItem("gwaggium_block", GWAGGIUM_BLOCK, new Item.Properties().fireResistant().stacksTo(16));
     public static final RegistryObject<Block> GWAGGIUM_ORE = registerBlock("gwaggium_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.AMETHYST).strength(3f), UniformInt.of(3, 7)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.AMETHYST).strength(3f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)));
     public static final RegistryObject<Item> GWAGGIUM_ORE_ITEM = registerBlockItem("gwaggium_ore", GWAGGIUM_ORE, new Item.Properties().fireResistant().stacksTo(64));
     public static final RegistryObject<Block> DEEP_GWAGGIUM_ORE = registerBlock("deepslate_gwaggium_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.AMETHYST).strength(3f), UniformInt.of(3, 7)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.AMETHYST).strength(3f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)));
     public static final RegistryObject<Item> DEEP_GWAGGIUM_ORE_ITEM = registerBlockItem("deepslate_gwaggium_ore", DEEP_GWAGGIUM_ORE, new Item.Properties().fireResistant().stacksTo(64));
 
 
