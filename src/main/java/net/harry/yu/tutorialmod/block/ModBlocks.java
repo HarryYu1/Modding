@@ -1,6 +1,7 @@
 package net.harry.yu.tutorialmod.block;
 
 import net.harry.yu.tutorialmod.TutorialMod;
+import net.harry.yu.tutorialmod.block.custom.BlueBerryCropBlock;
 import net.harry.yu.tutorialmod.block.custom.GwaggiumLampBlock;
 import net.harry.yu.tutorialmod.block.custom.jumpy;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -8,6 +9,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -44,6 +46,8 @@ public class ModBlocks {
             () -> new GwaggiumLampBlock(BlockBehaviour.Properties.of(Material.GLASS).lightLevel(state -> state.getValue(GwaggiumLampBlock.LIT) ? 15:0)));
     public static final RegistryObject<Item> GWAGGIUM_LAMP_ITEM = registerBlockItem("gwaggium_lamp", GWAGGIUM_LAMP, new Item.Properties().fireResistant().stacksTo(64));
     //register block
+    public static final RegistryObject<Block> BLUEBERRY_CROP = BLOCKS.register("blueberry_crop",
+            () -> new BlueBerryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));  //blocks.register because we want seed not block_item
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)

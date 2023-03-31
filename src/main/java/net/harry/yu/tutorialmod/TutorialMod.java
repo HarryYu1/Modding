@@ -5,6 +5,8 @@ import com.mojang.logging.LogUtils;
 import net.harry.yu.tutorialmod.block.ModBlocks;
 import net.harry.yu.tutorialmod.item.ModCreativeModeTab;
 import net.harry.yu.tutorialmod.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
@@ -77,6 +79,8 @@ public class TutorialMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            //.setRenderLayer(BLUEBERRY_CROP.get(), RenderType.cutout());
+            //^THIS IS NO LONGER USED, ITS NOW IN THE MODEL JSON FILE AS "render_type":
             }
     }
 }

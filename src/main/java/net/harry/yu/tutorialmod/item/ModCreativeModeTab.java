@@ -31,7 +31,8 @@ public class ModCreativeModeTab{
                             populator.accept(DEEP_GWAGGIUM_ORE_ITEM.get());
                             populator.accept(EIGHT_BALL.get());
                             populator.accept(JUMPY_ITEM.get());
-                            populator.accept(GWAGGIUM_LAMP_ITEM.get());})
+                            populator.accept(GWAGGIUM_LAMP_ITEM.get());
+                            populator.accept(BLUEBERRY_SEEDS.get());})
         );
 
 
