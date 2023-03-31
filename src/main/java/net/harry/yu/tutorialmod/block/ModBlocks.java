@@ -1,6 +1,7 @@
 package net.harry.yu.tutorialmod.block;
 
 import net.harry.yu.tutorialmod.TutorialMod;
+import net.harry.yu.tutorialmod.block.custom.jumpy;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -34,8 +35,12 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.AMETHYST).strength(3f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)));
     public static final RegistryObject<Item> DEEP_GWAGGIUM_ORE_ITEM = registerBlockItem("deepslate_gwaggium_ore", DEEP_GWAGGIUM_ORE, new Item.Properties().fireResistant().stacksTo(64));
 
-
+    public static final RegistryObject<Block> JUMPY = registerBlock("jumpy_block",
+            () -> new jumpy(BlockBehaviour.Properties.of(Material.STONE).lightLevel((anystate)->15)));
+    public static final RegistryObject<Item> JUMPY_ITEM = registerBlockItem("jumpy_block", JUMPY, new Item.Properties().fireResistant().stacksTo(64));
     //register block
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block)
     {
         //generics -> registryobject returns type T, and T is a block of sopme kind

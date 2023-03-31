@@ -29,7 +29,8 @@ public class ModCreativeModeTab{
                             populator.accept(GWAGGIUM_BLOCK_ITEM.get());
                             populator.accept(GWAGGIUM_ORE_ITEM.get());
                             populator.accept(DEEP_GWAGGIUM_ORE_ITEM.get());
-                            populator.accept(EIGHT_BALL.get());})
+                            populator.accept(EIGHT_BALL.get());
+                            populator.accept(JUMPY_ITEM.get());})
         );
 
 
