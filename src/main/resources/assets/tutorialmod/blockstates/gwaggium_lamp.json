@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "lit=true": {"model":  "tutorialmod:block/gwaggium_lamp_on"},
+    "lit=false": {"model":  "tutorialmod:block/gwaggium_lamp_off"}
+
+  }
+
+}

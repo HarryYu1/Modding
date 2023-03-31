@@ -1,6 +1,7 @@
 package net.harry.yu.tutorialmod.block;
 
 import net.harry.yu.tutorialmod.TutorialMod;
+import net.harry.yu.tutorialmod.block.custom.GwaggiumLampBlock;
 import net.harry.yu.tutorialmod.block.custom.jumpy;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -38,6 +39,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> JUMPY = registerBlock("jumpy_block",
             () -> new jumpy(BlockBehaviour.Properties.of(Material.STONE).lightLevel((anystate)->15)));
     public static final RegistryObject<Item> JUMPY_ITEM = registerBlockItem("jumpy_block", JUMPY, new Item.Properties().fireResistant().stacksTo(64));
+    //register block
+    public static final RegistryObject<Block> GWAGGIUM_LAMP = registerBlock("gwaggium_lamp",
+            () -> new GwaggiumLampBlock(BlockBehaviour.Properties.of(Material.GLASS).lightLevel(state -> state.getValue(GwaggiumLampBlock.LIT) ? 15:0)));
+    public static final RegistryObject<Item> GWAGGIUM_LAMP_ITEM = registerBlockItem("gwaggium_lamp", GWAGGIUM_LAMP, new Item.Properties().fireResistant().stacksTo(64));
     //register block
 
 
