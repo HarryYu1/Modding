@@ -5,6 +5,8 @@ import com.mojang.logging.LogUtils;
 import net.harry.yu.tutorialmod.block.ModBlocks;
 import net.harry.yu.tutorialmod.item.ModCreativeModeTab;
 import net.harry.yu.tutorialmod.item.ModItems;
+import net.harry.yu.tutorialmod.painting.ModPaintings;
+import net.harry.yu.tutorialmod.villager.ModVillagers;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.network.chat.Component;
@@ -43,6 +45,8 @@ public class TutorialMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModVillagers.register(modEventBus);
+        ModPaintings.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         //modEventBus.addListener(this::buildContents);
@@ -59,6 +63,11 @@ public class TutorialMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+        //registration by event
+        event.enqueueWork(()-> {
+            ModVillagers.registerPOIs();
+        });
+
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)

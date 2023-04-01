@@ -11,5 +11,6 @@
   "item.tutorialmod.blueberry_seeds": "Blueberry Seeds",
   "block.tutorialmod.blueberry_crop": "Blueberry Crop",
 
-  "item_group.tutorialmod.example": "My Tab"
+  "item_group.tutorialmod.example": "My Tab",
+  "entity.minecraft.village.tutorialmod.jump_master": "Jump Master"
 }
