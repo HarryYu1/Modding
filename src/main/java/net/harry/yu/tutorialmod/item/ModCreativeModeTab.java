@@ -13,16 +13,18 @@ import static net.harry.yu.tutorialmod.item.ModItems.*;
 
 public class ModCreativeModeTab{
 
+    public static CreativeModeTab MY_TAB;
+
     public void ModCreativeModeTab() {}
     @SubscribeEvent
     public void buildContents(CreativeModeTabEvent.Register event){
-        event.registerCreativeModeTab(new ResourceLocation(MOD_ID, "example"),
+        MY_TAB = event.registerCreativeModeTab(new ResourceLocation(MOD_ID, "example"),
                 //name of tab to display
                 builder -> builder.title(Component.translatable("item_group." + MOD_ID + ".example"))
                         //set icon
                         //.get fetches the item data I assume
                         .icon(()-> new ItemStack(GWAGGIUM.get()))
-                        //add items to tab
+                        //add items to tab NOT NEEDED NECESSARILY
                         .displayItems((enabled_flag, populator, has_permissions) -> {
                             populator.accept(GWAGGIUM.get());
                             populator.accept(GWASHIMOTO.get());
@@ -33,10 +35,13 @@ public class ModCreativeModeTab{
                             populator.accept(JUMPY_ITEM.get());
                             populator.accept(GWAGGIUM_LAMP_ITEM.get());
                             populator.accept(BLUEBERRY_SEEDS.get());})
+                        //YOU CAN ADD .title() FOR NAME
         );
 
 
 
     }
+
+
 
 }

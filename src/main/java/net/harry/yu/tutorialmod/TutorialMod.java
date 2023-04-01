@@ -76,6 +76,9 @@ public class TutorialMod
             event.accept(GWAGGIUM);
         if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS)
             event.accept(GWASHIMOTO);
+        if (event.getTab() == ModCreativeModeTab.MY_TAB) {
+
+        }
     }
 
 

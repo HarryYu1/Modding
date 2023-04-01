@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "tutorialmod:block/zircon_lamp_on"
+    "all": "tutorialmod:block/gwaggium_lamp_on"
   }
 
 }

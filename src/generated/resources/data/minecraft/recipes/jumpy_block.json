@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "tutorialmod:eight_ball"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "tutorialmod:jumpy_block"
+  }
+}

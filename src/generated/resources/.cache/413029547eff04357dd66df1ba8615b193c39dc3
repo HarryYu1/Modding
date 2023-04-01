@@ -1,0 +1,8 @@
+// 1.19.3	2023-04-01T15:08:42.5192002	Block States: tutorialmod
+e91c27b5497776f5c071176c80cb117af5e43ecb assets/tutorialmod/blockstates/blueberry_crop.json
+56b0c5bde92a3eddeadf07080923388bfdbf34d5 assets/tutorialmod/blockstates/gwaggium_block.json
+61a9bbf4a460ff522c3cf1d5460bbf6c932d84fa assets/tutorialmod/blockstates/gwaggium_ore.json
+b3a9fa00e7d3aa75632f4da47eae7f1d7bb8dc69 assets/tutorialmod/models/block/gwaggium_block.json
+20e745fcae64672dc4cb5b04708897982f4c7a4a assets/tutorialmod/models/block/gwaggium_ore.json
+b72d901200571b8d95129b2656a83563f862d62d assets/tutorialmod/models/item/gwaggium_block.json
+7c5d012e1e831b4cec252935b7ba47b4076f8554 assets/tutorialmod/models/item/gwaggium_ore.json

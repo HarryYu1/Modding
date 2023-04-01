@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.entity.ai.sensing.GolemSensor;
 
 public class GwaggiumLampBlock extends Block {
     public static BooleanProperty LIT = BooleanProperty.create("lit"); //corresponds to blockstate json
